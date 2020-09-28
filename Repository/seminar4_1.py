@@ -1,18 +1,14 @@
+import sys
 import argparse
 
 def createParser ():
     parser = argparse.ArgumentParser()
-    parser.add_argument('name', nargs = '?')
+    parser.add_argument('name', nargs = '?', default = 'мир')
 
     return parser
 
 if __name__ == '__main__':
     parser = createParser()
-    namespace = parser.parse_args()
+    namespace = parser.parse_args (sys.argv[1:])
 
-    print(namespace)
-
-    if namespace.name:
-        print('Привет, {}!'.format(namespace.name))
-    else:
-        print('Привет, мир!')
+print('Привет, {}!'.format(namespace.name))
