@@ -13,6 +13,6 @@ if __name__ == '__main__':
     print(namespace)
 
     if namespace.name:
-        print('Привет, {}!'.format (namespace.name))
+        print('Привет, {}!'.format(namespace.name))
     else:
         print('Привет, мир!')
