@@ -10,13 +10,13 @@ class Complex:
         if self.__b == 0:
             return (str(self.__a))
         return (str(self.__a) + ' ' + str(self.__b)+'i')
-    def __addition__(self, other):
+    def __add__(self, other):
         return Complex(self.__a + other.__a, self.__b + other.__b)
-    def __multiplication__(self, other):
+    def __mul__(self, other):
         return Complex((self.__a*other.__a - self.__b*other.__b) + (self.__a*other.__a + self.__b*other.__b)+'i')
-    def __substraction__(self, other):
+    def __sub__(self, other):
         return Complex((self.__a - other.__a) + (self.__b - other.__b)+'i')
-    def __division__(self, other):
+    def __divmod__(self, other):
         return Complex(((self.__a*other.__a + self.__b*other.__b)/(other.__a**2 +other.__b**2)) + ((other.__a*self.__b - self.__a*other.__b)/(other.__a**2 + other.__b*2))+'i')
 
     def __pow__(self, power, modulo=None):
